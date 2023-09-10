@@ -9,20 +9,19 @@
     >
       <div
         class="ripple relative overflow-hidden rounded-lg w-full"
-        :class="animatedImage"
-        data-te-ripple-init
-        data-te-ripple-color="light"
+       :data-aos="animatedImage"
       >
         <img :src="image" class="content-image" alt="Louvre" />
       </div>
     </div>
 
     <div
+    data-aos="fade-down"
       class="flex items-center justify-center w-full shrink-0 grow-0 basis-auto lg:w-6/12"
     >
       <div class="w-4/6">
         <h1
-          class="mt-2 mb-6 text-5xl font-bold tracking-tight md:text-6xl xl:text-5xl"
+          class="mt-2 mb-6 text-5xl tracking-tight md:text-6xl xl:text-5xl"
         >
           {{ header }}
         </h1>
@@ -49,7 +48,7 @@ const rowReverse = computed(() =>
 const animatedImage = computed(() => {
   // scrollingDetection()
   return props.isReverse
-    ? "animate__animated animate__fadeInRight"
-    : "animate__animated animate__fadeInLeft";
+    ? "fade-up-right"
+    : "fade-up-left";
 });
 </script>

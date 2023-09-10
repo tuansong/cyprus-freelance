@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full my-24 mx-auto">
-    <div class="cta-section mb-32 lg:text-left md:px-60">
+  <div id="cta" class="cta-section w-full mt-24 md:py-20 mx-auto flex items-center">
+    <div class="lg:text-left md:px-60">
       <div
         class="w-full h-full flex items-center justify-center px-6 py-12 md:px-12"
       >
@@ -9,16 +9,15 @@
             <h1 class="mb-12 text-5xl font-bold leading-tight tracking-tight">
               Interested? Make an enquiry.
             </h1>
-            <p class="text-neutral-300 dark:text-neutral-200">
+            <p class="text-neutral-300 dark:text-neutral-200 mb-3">
               For more information or to request that a member of our sales team
               contact you, please fill out the form.
             </p>
             <p>
-              T: <span><a href="tel:+4733378901">+84 0123456789</a></span>
+              T : <span class="form-label tracking-wide text-gray-70 font-bold"><a href="tel:+4733378901">+84 0123456789</a></span>
             </p>
             <p>
-              E:
-              <span
+              E : <span class="form-label tracking-wide text-gray-700 font-bold"
                 ><a href="mailto:someone@example.com">test@gmail.com</a></span
               >
             </p>
@@ -74,7 +73,7 @@
                     class="form-input appearance-none block w-full bg-transparent border-none py-3 mb-3 leading-tight focus:outline-none"
                     id="grid-first-name"
                     type="text"
-                    placeholder="Jane"
+                    placeholder="Enter your first name"
                   />
                   <p
                     v-if="initFocusState.firstName"
@@ -96,7 +95,7 @@
                     class="form-input appearance-none block w-full bg-transparent border-none py-3 mb-3 leading-tight focus:outline-none"
                     id="grid-last-name"
                     type="text"
-                    placeholder="Doe"
+                    placeholder="Enter your last name"
                   />
                   <p
                     v-if="initFocusState.lastName"
@@ -120,8 +119,8 @@
                     @focus="onFocus('phone')"
                     class="form-input appearance-none block w-full bg-transparent border-none py-3 mb-3 leading-tight focus:outline-none"
                     id="grid-city"
-                    type="text"
-                    placeholder="Albuquerque"
+                    type="number"
+                    placeholder="Enter your phone number"
                   />
                   <p
                     v-if="initFocusState.phone"
@@ -144,7 +143,7 @@
                     class="form-input appearance-none block w-full bg-transparent border-none py-3 mb-3 leading-tight focus:outline-none"
                     id="grid-city"
                     type="text"
-                    placeholder="John@gmail.com"
+                    placeholder="Enter your email"
                   />
                   <p
                     v-if="initFocusState.email"
@@ -182,9 +181,10 @@
                 purpose.
               </p>
             </form>
-            <button @click="submitForm" class="form-button p-10">
+            <button :disabled="notReadyToSubmit" @click="submitForm" class="form-button p-10 mb-4">
               Submit your Enquiry →
             </button>
+            <p v-if="responseMessage" class="form-info mb-3">{{ message }}</p>
           </div>
         </div>
       </div>
@@ -193,7 +193,7 @@
 </template>
 
 <script setup>
-const initFocusState = reactive({
+const initFocusState = ref({
   firstName: false,
   lastName: false,
   phone: false,
@@ -210,24 +210,34 @@ const formData = reactive({
   inquiry: "",
 });
 
+const responseMessage = ref("");
+
 const validatefirstName = computed(() =>
   !formData.firstName ? "Please enter first name" : ""
 );
 const validatelastName = computed(() =>
-  !formData.firstName ? "Please enter first name" : ""
+  !formData.lastName ? "Please enter last name" : ""
 );
 const validateNumber = computed(() =>
-  !formData.firstName ? "Please enter first name" : ""
+  !formData.phone ? "Please enter phone number" : ""
 );
 const validateEmail = computed(() =>
-  !formData.firstName ? "Please enter first name" : ""
+  !formData.email ? "Please enter email" : ""
 );
 const validateInquiry = computed(() =>
-  !formData.firstName ? "Please enter first name" : ""
+  !formData.inquiry ? "Please enter inquiry" : ""
+);
+const notReadyToSubmit = computed(() => {
+    return Object.values(formData).some(v => !v)
+})
+const message = computed(() => 
+   responseMessage.value == "OK"
+    ? "Thank you for submit, we will contact you soon"
+    : responseMessage
 );
 
 const onFocus = (type) => {
-  initFocusState[type] = true;
+  initFocusState.value[type] = true;
 };
 
 const submitForm = (e) => {
@@ -258,6 +268,6 @@ const submitForm = (e) => {
         </tr>
     </table>
     `,
-  }).then((message) => alert(message));
+  }).then((message) => (responseMessage.value = message));
 };
 </script>

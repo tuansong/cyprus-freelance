@@ -6,11 +6,11 @@
     image="/_nuxt/assets/images/pafilia-permnanent-residency-content-01.jpg"
   >
     <ul>
-      <li class="mb-2">Capital: Nicosia</li>
-      <li class="mb-2">Population: 1.244.188 (figure in 2021)</li>
-      <li class="mb-2">Area: 9.251 km2 (3,572 sq mi)</li>
-      <li class="mb-2">Official languages: Greek and Turkish</li>
-      <li class="mb-2">GDP: 49.857 billion USD (2013 estimate)</li>
+      <li class="mb-2">• Capital: Nicosia</li>
+      <li class="mb-2">• Population: 1.244.188 (figure in 2021)</li>
+      <li class="mb-2">• Area: 9.251 km2 (3,572 sq mi)</li>
+      <li class="mb-2">• Official languages: Greek and Turkish</li>
+      <li class="mb-2">• GDP: 49.857 billion USD (2013 estimate)</li>
     </ul>
   </Content>
   <Content
@@ -78,4 +78,5 @@
     </p>
   </Content>
   <CTA />
+  <Footer />
 </template>

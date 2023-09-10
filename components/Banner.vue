@@ -3,17 +3,17 @@
     class="banner relative bg-cover bg-no-repeat mb-64"
   >
     <div
-      class="banner-content absolute md:top-3/4 md:left-2/4 top-2/4 left-0/4 md:w-2/6 px-10 py-8 overflow-hidden animate__animated animate__fadeIn"
+      data-aos="fade-in"
+      class="banner-content absolute lg:top-3/4 lg:left-2/4 top-2/4 left-0/4 lg:w-2/6 md:w-3/6 md:left-1/4 px-10 py-8 overflow-hidden"
     >
       <div class="text-left md:px-12">
-        <h1
-          class="mt-2 mb-6 text-5xl font-bold tracking-tight md:text-6xl xl:text-5xl"
-        >
-        Permanent Cyprus Residency
-
+        <h1 class="mt-2 mb-6 text-3xl tracking-tight md:text-3xl xl:text-3xl">
+          A COMPREHENSIVE PROGRAM TO FACILITATE RELOCATING TO CYPRUS WITH YOUR
+          FAMILY
         </h1>
         <p class="mb-8 text-neutral-800 dark:text-neutral-500">
-          A simple proposition: invest in Cyprus’ real estate landscape, and Cyprus will invest in you. Consider Cyprus residency.
+          If you're considering relocating with your family, the stunning island
+          of Cyprus is definitely worth exploring this
         </p>
         <button @click="scrollTo" class="banner-direction-button">
           &darr;
@@ -23,12 +23,11 @@
   </div>
 </template>
 <script setup>
-
 function scrollTo() {
-  if(document) {
-    console.log(document)
-    document.getElementById('content').scrollIntoView({ behavior: 'smooth', block: 'center' })
+  if (document) {
+    document
+      .getElementById("content")
+      .scrollIntoView({ behavior: "smooth", block: "center" });
   }
 }
-
 </script>

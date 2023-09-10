@@ -2,8 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: bentoBold;
+    src: url(../fonts/BentonSansBold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: bentoLight;
+    src: url(../fonts/BentonSansLight.otf);
+}
+
 body {
-    color: #1b2633
+    color: #1b2633;
+    font-family: bentoLight;
 }
 
 .header {
@@ -13,6 +24,7 @@ body {
 
 .scrolled-header {
     background-color: white;
+    color: #1b2633;
     box-shadow: 0 1px 5px rgba(0,0,0,.11);
 }
 
@@ -82,7 +94,6 @@ body {
 .cta-section {
     background-image: url(../images/banner.jpeg);
     background-position: 50%;
-    height: 80vh;
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -132,7 +143,11 @@ body {
     text-align: center;
 }
 
-.form-button:hover {
+.form-button:disabled {
+    background-color: grey;
+}
+
+.form-button:hover:enabled {
     background-color: #fff;
     color: #a4916f;
 }
@@ -162,3 +177,17 @@ input:-webkit-autofill:active{
     -webkit-text-fill-color: #ffffff;
     transition: background-color 5000s ease-in-out 0s;
 }
+
+.footer {
+    background-color: #000;
+    float: left;
+
+    color: #727577;
+}
+
+@media only screen and (max-width: 600px) {
+    .banner {
+        background-size: auto;
+      background-position: 50% 90%;
+    }
+  }
