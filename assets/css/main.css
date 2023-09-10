@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    color: #1b2633
+}
+
+.header {
+    border-bottom: 1px solid hsla(0,0%,100%,.11);
+    border-width: 90%;
+}
+
+.scrolled-header {
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(0,0,0,.11);
+}
+
+.banner {
+    background-image: url(../images/banner.jpeg);
+    background-position: 50%;
+    height: 80vh;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+    filter: blur(0);
+    opacity: 1;
+}
+
+.banner::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    content: '';
+    background: linear-gradient(170deg,#1b2636,rgba(27,38,54,0) 66%)
+}
+
+.banner-content {
+    background-color: #fff;
+    box-shadow: 0 0 11px rgba(0,0,0,.33);
+
+    color: #1b2633
+}
+
+.banner-direction-button {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+
+    border-radius: 50%;
+    color: #a4916f;
+    background-color: #ece7df;
+}
+
+.banner-direction-button:hover {
+    background-color: #a4916f;
+    color: #FFF;
+}
+
+.section-content {
+    max-height: 850px;
+}
+
+.content-image {
+    width: 100%;
+    max-height: 850px;
+
+}
+
+.cta-section {
+    background-color: #1b2633;
+    position: relative;
+    z-index: 0
+}
+
+.cta-section {
+    background-image: url(../images/banner.jpeg);
+    background-position: 50%;
+    height: 80vh;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+    filter: blur(0);
+    opacity: 1;
+}
+
+.cta-section::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    content: '';
+    background: linear-gradient(178deg,#1c2a3d,rgb(8 27 54 / 0%) 185%);
+    z-index: -1;
+}
+
+.form-label {
+    color: #a4916f;
+}
+
+.form-input::placeholder {
+    color: #e3d6bf;
+}
+
+.form-input, .form-select {
+    color: #e3d6bf;
+    border-bottom: 2px solid hsla(0,0%,90%,.11);
+}
+
+.form-select, .form-info {
+    color: #e3d6bf;
+}
+
+.form-button {
+    line-height: 50px;
+    padding: 0 25px;
+    border-radius: 50px;
+    position: relative;
+    background-color: #a4916f;
+    color: #fff;
+    text-align: center;
+}
+
+.form-button:hover {
+    background-color: #fff;
+    color: #a4916f;
+}
+
+.form-select::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 0;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    width: 7px;
+    height: 7px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+}
