@@ -28,8 +28,17 @@ body {
     box-shadow: 0 1px 5px rgba(0,0,0,.11);
 }
 
+.header-logo {
+    width: 100px;
+    height: 40px;
+}
+
+.scrolled-header .header-logo g {
+    fill: #000000;
+}
+
 .banner {
-    background-image: url(../images/banner.jpeg);
+    background-image: url(../../public/images/banner.jpeg);
     background-position: 50%;
     height: 80vh;
     background-size: cover;
@@ -92,7 +101,7 @@ body {
 }
 
 .cta-section {
-    background-image: url(../images/banner.jpeg);
+    background-image: url(../../public/images/banner.jpeg);
     background-position: 50%;
     background-size: cover;
     background-position: 50%;

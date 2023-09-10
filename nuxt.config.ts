@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  mode: 'static',
   app: {
+    baseURL: '/cyprus-freelance/', // baseURL: '/<repository>/'
+    buildAssetsDir: 'assets',
     head: {
       title: 'A COMPREHENSIVE PROGRAM TO FACILITATE RELOCATING TO CYPRUS WITH YOUR FAMILY',
       meta: [
@@ -15,7 +18,10 @@ export default defineNuxtConfig({
         { property: 'og:locale', content: 'en_US' },
       ],
 
-      link: [{ rel: "stylesheet", type: "text/css", href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' }],
+      link: [
+        { rel:"icon", href:"images/favicon.png", sizes:"32x32" },
+        { rel: "stylesheet", type: "text/css", href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' }
+      ],
       script: [
         {
           src: "https://smtpjs.com/v3/smtp.js",

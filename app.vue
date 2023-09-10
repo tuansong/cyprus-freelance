@@ -3,7 +3,7 @@
   <Banner />
   <Content
     header="1. Cyprus: An overview"
-    image="/_nuxt/assets/images/pafilia-permnanent-residency-content-01.jpg"
+    image="/images/pafilia-permnanent-residency-content-01.jpg"
   >
     <ul>
       <li class="mb-2">• Capital: Nicosia</li>
@@ -15,7 +15,7 @@
   </Content>
   <Content
     header="2. Geography and Climate"
-    image="/_nuxt/assets/images/pafilia-permnanent-residency-content-02.jpg"
+    image="/images/pafilia-permnanent-residency-content-02.jpg"
     isReverse
   >
     <p class="mb-5">
@@ -39,7 +39,7 @@
   </Content>
   <Content
     header="3. Quality of life"
-    image="/_nuxt/assets/images/pafilia-permnanent-residency-content-03.jpg"
+    image="/images/pafilia-permnanent-residency-content-03.jpg"
   >
     <p>
       If you're looking for an exceptional country to explore, Cyprus is the
@@ -52,7 +52,7 @@
   </Content>
   <Content
     header="4. Highlights"
-    image="/_nuxt/assets/images/pafilia-permnanent-residency-content-04.jpg"
+    image="/images/pafilia-permnanent-residency-content-04.jpg"
     isReverse
   >
     <p class="mb-5">
