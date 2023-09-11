@@ -230,11 +230,12 @@ const validateInquiry = computed(() =>
 const notReadyToSubmit = computed(() => {
     return Object.values(formData).some(v => !v)
 })
-const message = computed(() => 
-   responseMessage.value == "OK"
+const message = computed(() => {
+    console.log(responseMessage.value)
+   return responseMessage.value == "OK"
     ? "Thank you for submit, we will contact you soon"
     : responseMessage
-);
+});
 
 const onFocus = (type) => {
   initFocusState.value[type] = true;
@@ -244,9 +245,9 @@ const submitForm = (e) => {
   e.preventDefault();
 
   Email.send({
-    SecureToken: "5ef8b875-e00d-4887-ab0d-fd2b7a8fe767",
-    To: "cuccu771@gmail.com",
-    From: "trantuansong22@gmail.com",
+    SecureToken : "48e4a0bf-addf-419d-8a18-694e6377d739",
+    To: "trantuansong22@gmail.com",
+    From: "cyprusad.sg@gmail.com",
     Subject: "[Cyprus Residency] - New client",
     Body: `
     <table border="1" cellpadding="5" cellspacing="0">
