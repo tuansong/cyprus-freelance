@@ -8,10 +8,10 @@
       class="mb-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6"
     >
       <div
-        class="ripple relative overflow-hidden rounded-lg w-full"
+        class="content-image ripple relative overflow-hidden rounded-lg w-full"
        :data-aos="animatedImage"
       >
-        <img :src="image" class="content-image" alt="Louvre" />
+        <!-- <img :src="image" class="content-image" alt="Louvre" /> -->
       </div>
     </div>
 
@@ -19,7 +19,7 @@
     data-aos="fade-down"
       class="flex items-center justify-center w-full shrink-0 grow-0 basis-auto lg:w-6/12"
     >
-      <div class="w-4/6">
+      <div class="w-4/6 py-40">
         <h1
           class="mt-2 mb-6 text-5xl tracking-tight md:text-6xl xl:text-5xl"
         >
