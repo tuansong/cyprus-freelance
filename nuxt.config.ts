@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { fileURLToPath } from 'url';
+
 export default defineNuxtConfig({
   mode: 'static',
   app: {
@@ -38,4 +40,7 @@ export default defineNuxtConfig({
     },
   },
   plugins: [{ src: "./plugins/aos.client.ts", ssr: false }],
+  alias: {
+    'images': fileURLToPath(new URL('./assets/images', import.meta.url))
+  }
 })
