@@ -7,16 +7,16 @@ export default defineNuxtConfig({
     baseURL: '/cyprus-freelance/', // baseURL: '/<repository>/'
     buildAssetsDir: 'assets',
     head: {
-      title: 'A COMPREHENSIVE PROGRAM TO FACILITATE RELOCATING TO CYPRUS WITH YOUR FAMILY',
+      title: 'Pafilia',
       meta: [
         {
           name: 'description',
           content: "If you're considering relocating with your family, the stunning island of Cyprus is definitely worth exploring this"
         },
-        { property: 'og:title', content: 'The Intuitive Web Framework' },
-        { property: 'og:description', content: 'Build your next Vue.js application with confidence using Nuxt...' },
+        { property: 'og:title', content: 'Pafilia' },
+        { property: 'og:description', content: 'A COMPREHENSIVE PROGRAM TO FACILITATE RELOCATING TO CYPRUS WITH YOUR
+        FAMILY' },
         { property: 'og:type', content: 'website' },
-        // { property: 'og:url', content: 'https://nuxt.com' },
         { property: 'og:locale', content: 'en_US' },
       ],
 
