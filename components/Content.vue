@@ -19,7 +19,7 @@
     data-aos="fade-down"
       class="flex items-center justify-center w-full shrink-0 grow-0 basis-auto lg:w-6/12"
     >
-      <div class="w-4/6 py-40">
+      <div class="w-4/6 md:py-40 py-28">
         <h1
           class="mt-2 mb-6 text-5xl tracking-tight md:text-6xl xl:text-5xl"
         >

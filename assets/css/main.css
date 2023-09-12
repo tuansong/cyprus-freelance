@@ -213,4 +213,8 @@ input:-webkit-autofill:active{
         background-size: auto;
       background-position: 50% 90%;
     }
+
+    .content-image {
+        min-height: 400px;
+    }
   }
