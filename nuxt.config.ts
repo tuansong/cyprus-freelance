@@ -14,8 +14,7 @@ export default defineNuxtConfig({
           content: "If you're considering relocating with your family, the stunning island of Cyprus is definitely worth exploring this"
         },
         { property: 'og:title', content: 'Pafilia' },
-        { property: 'og:description', content: 'A COMPREHENSIVE PROGRAM TO FACILITATE RELOCATING TO CYPRUS WITH YOUR
-        FAMILY' },
+        { property: 'og:description', content: 'A COMPREHENSIVE PROGRAM TO FACILITATE RELOCATING TO CYPRUS WITH YOUR FAMILY' },
         { property: 'og:type', content: 'website' },
         { property: 'og:locale', content: 'en_US' },
       ],
